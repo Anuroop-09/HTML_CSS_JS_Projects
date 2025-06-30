@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+    background-color: #0b7285;
+    color: #eee;
+}
+
+body {
+    margin: 2rem;
+}
+
+/* COMMON COMPONENTS */
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+/* MAIN COMPONENTS */
+.instruction {
+    text-align: center;
+    color: #fcc419;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.main-window {
+    margin: 5rem auto 0;
+    max-width: 120rem;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.input-details-form {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.labels {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.text-input {
+    width: 26rem;
+    font-size: 1.4rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: .5px solid #495057;
+}
+
+.btn {
+    height: 4rem;
+    background-color: #f76707;
+    color: #eee;
+    font-weight: 700;
+    padding: 1rem;
+    margin-top: auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.heading-secondary {
+    margin-bottom: 2rem;
+}
+
+#show-output-items {
+    width: 50rem;
+    height: 50rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #111;
+}
+
+#show-output-items p {
+    font-size: 1.4rem;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Status Creator &vert; Your Daily Updates Creator</title>
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script defer src="./scripts/index.js"></script>
+</head>
+
+<body>
+    <div class="container d-grid">
+        <header class="header d-flex">
+            <div class="logo">
+                <p class="logo__text d-flex">
+                    <span class="logo__text-main">dsc</span>
+                    <span class="logo__text-sub">Your Daily Updates Creator</span>
+                </p>
+            </div>
+            <nav class="navbar">
+                <ul class="nav__list d-flex">
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav__link">main page</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="https://www.linkedin.com/in/anuroop-pamarthi-b4a2b1214" class="nav__link">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="section-input">
+            <div class="main-window d-grid">
+                <div class="input-details d-flex">
+                    <div class="title-block">
+                        <h1 class="heading-primary">Enter Ticket No's</h1>
+                        <div class="info">
+                            <span class="info__icon">
+                                <ion-icon name="information-circle-outline"></ion-icon>
+                            </span>
+                            <p class="info__text">Please provide your port numbers one after another with comma (,)</p>
+                        </div>
+                    </div>
+                    <form class="form d-grid">
+                        <div class="form__group">
+                            <label class="form__label" for="mind-maps">Mind Maps</label>
+                            <input class="form__input" id='mind-maps' type="text" placeholder='Enter PORT Number'>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="test-cases">Test Cases Creation/Edit</label>
+                            <input class="form__input" id='test-cases' type="text" placeholder='Enter PORT Number'>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="dev-execution">Dev Execution</label>
+                            <input class="form__input" id='dev-execution' type="text" placeholder='Enter PORT Number'>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="stage-execution">Stage Execution</label>
+                            <input class="form__input" id='stage-execution' type="text" placeholder='Enter PORT Number'>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="defects">Defects Raised</label>
+                            <input class="form__input" id='defects' type="text" placeholder='Enter PORT Number'>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="automation">Automation</label>
+                            <input class="form__input" id='automation' type="text" placeholder='Enter Test Case Number'>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="dev-team">Dev Team Connect</label>
+                            <input class="form__input" id='dev-team' type="text" placeholder='Enter PORT Number'>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="hotfix">Hotfix</label>
+                            <input class="form__input" id='hotfix' type="text" placeholder='Enter PORT Number'>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="regression">Regression</label>
+                            <input class="form__input" id='regression' type="text" placeholder='Enter PORT Number'>
+                        </div>
+                        <button class="btn__generate" id="generate">Generate Status</button>
+                    </form>
+                </div>
+                <div class="show-output">
+                    <div class="title-block">
+                        <h1 class="heading-primary">Today's Update</h1>
+                        <div class="show-output__action d-flex">
+                            <button class="btn__reset" id="reset">reset</button>
+                            <button class="btn__copy" id="copy"><ion-icon name="copy-outline"></ion-icon></button>
+                            <p class="copy-alert">Copied!</p>
+                        </div>
+                    </div>
+                    <!-- <div id="show-output__items"></div> -->
+                    <textarea name="textarea" id="show-output__items"></textarea>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

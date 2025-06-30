@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+            font-family: sans-serif;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .window {
+            display: grid;
+            grid-template-rows: 6rem auto;
+            gap: 2rem;
+        }
+
+        .heading__primary {
+            font-size: 4.8rem;
+        }
+
+        .heading__secondary {
+            font-size: 2.4rem;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4.8rem;
+        }
+
+        .header__link {
+            font-size: 1.2rem;
+        }
+
+        .section:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        .section__contanier {
+            padding: 0 9.6rem;
+        }
+
+        .list {
+            margin-top: 1.2rem;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .list__item {
+            background-color: #ddd;
+            border-radius: 5px;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .list__link:link,
+        .list__link:visited {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <header class="header">
+            <h1 class="heading__primary">My Projects</h1>
+            <a target="_blank" href="https://www.linkedin.com/in/anuroop-pamarthi-b4a2b1214"
+                class="header__link">Contact</a>
+        </header>
+        <main class="projects--list">
+            <section class="section section--myprojects">
+                <div class="section__contanier">
+                    <h2 class="heading__secondary">
+                        Project List
+                    </h2>
+                    <ul class="list">
+                        <li class="list__item">
+                            <a target="_blank" href="./Daily_Status_Creator/index.html" class="list__link">
+                                VIDA &vert; DSC App
+                            </a>
+                        </li>
+
+                        <li class="list__item">
+                            <a target="_blank" href="./Full_Stack_Resource/index.html" class="list__link">
+                                Full Stack Development Resources
+                            </a>
+                        </li>
+
+                        <li class="list__item">
+                            <a target="_blank" href="./BMI_Calculator/bmiHome.html" class="list__link">
+                                BMI Calculator &vert; app
+                            </a>
+                        </li>
+
+                        <li class="list__item">
+                            <a target="_blank" href="./ToDo_List/index.html" class="list__link">
+                                ToDo List App
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section section--recreation">
+                <div class="section__contanier">
+                    <h2 class="heading__secondary">
+                        Recreation Websites Projects
+                    </h2>
+                    <ul class="list">
+                        <li class="list__item">
+                            <a href="./Website_Recreations/Slack_Home_Clone/index.html" class="list__link">
+                                Slack Home Page
+                            </a>
+                        </li>
+
+                        <li class="list__item">
+                            <a href="./Website_Recreations/VIDA_Clone/index.html" class="list__link">
+                                VIDA Website
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

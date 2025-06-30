@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-heading-primary: #fd7e14;
+    --color-heading-secondary: #495057;
+    --color-button-add: #37b24d;
+    --color-button-delete: #f03e3e;
+    --color-input-text: #f1f3f5;
+    --color-white: #fff;
+    --color-error-text: #e03131;
+    --color-task-item: #dee2e6;
+    --color-task-item-text: #343a40;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    background: #00b09b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,
+            #96c93d,
+            #00b09b);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-color: linear-gradient(to right, #96c93d, #00b09b);
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+}
+
+/* COMMON */
+.heading-primary {
+    font-size: 3.2rem;
+    display: flex;
+    align-items: center;
+    color: var(--color-heading-primary);
+}
+
+.heading-secondary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--color-heading-secondary);
+}
+
+.d-flex__column {
+    display: flex;
+    flex-direction: column !important;
+}
+
+.d-flex__row {
+    display: flex;
+    flex-direction: row !important;
+}
+
+input[type='text'] {
+    outline: none;
+}
+
+/* MAIN WINDOW */
+.window {
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 42rem;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+/* TASK WINDOW */
+
+.todo__block {
+    gap: 2rem;
+    width: 100%;
+    align-items: center;
+}
+
+/* ADD ITEM */
+.add__item {
+    gap: .8rem;
+}
+
+.add__item-form {
+    gap: 1rem;
+    align-items: center;
+}
+
+.add__item-input {
+    border: none;
+    background: none;
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: var(--color-input-text);
+    border-radius: .5rem;
+}
+
+.add__item-input::placeholder {
+    font-style: italic;
+}
+
+.btn__add {
+    align-self: center;
+    border: none;
+    background: none;
+    align-items: center;
+    gap: .5rem;
+    color: var(--color-white);
+    background-color: var(--color-button-add);
+    font-size: 1.4rem;
+    padding: .8rem;
+    border-radius: .5rem;
+}
+
+.add__error {
+    font-size: 1.2rem;
+    color: var(--color-error-text);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+}
+
+.add__error-show {
+    visibility: initial;
+    opacity: 1;
+}
+
+/* TASK ITEMS */
+.todo__show-items {
+    width: 100%;
+    align-self: start;
+    gap: 1rem;
+}
+
+.todo__list {
+    list-style: none;
+    gap: 1rem;
+}
+
+.todo__item {
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: var(--color-task-item);
+    color: var(--color-task-item-text);
+    border-radius: .8rem;
+}
+
+.todo__item-checkbox {
+    outline: none;
+}
+
+.todo__item-checkbox:checked+.todo__item-text {
+    text-decoration: line-through;
+}
+
+.todo__item-delete {
+    margin-left: auto;
+    padding: .5rem;
+    background-color: var(--color-button-delete);
+    color: var(--color-white);
+    border-radius: 50%;
+}

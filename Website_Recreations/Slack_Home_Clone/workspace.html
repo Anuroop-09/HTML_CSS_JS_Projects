@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Resources/Slack Page Title Logo.svg" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./STYLE CSS/workspace.css">
+    <title>WorkSpace | Slack</title>
+</head>
+
+<body>
+    <div class="container d-grid">
+        <header class="header d-grid">
+            <section class="header__nav">
+                <ul class="nav__colors">
+                    <li class="nav__item" style="background-color: #f03e3e;"></li>
+                    <li class="nav__item" style="background-color: #fcc419;"></li>
+                    <li class="nav__item" style="background-color: #51cf66;"></li>
+                </ul>
+                <div class="nav__icons">
+                    <ion-icon class="header__icon" name="arrow-back-outline"></ion-icon>
+                    <ion-icon class="header__icon" name="arrow-forward-outline"></ion-icon>
+                    <ion-icon class="header__icon" name="time-outline"></ion-icon>
+                </div>
+            </section>
+            <section class="header__search">
+                <input class="header__search--input" type="text" placeholder="Search">
+            </section>
+            <section class="header__help">
+                <ion-icon class="header__icon" name="help-circle-outline"></ion-icon>
+            </section>
+        </header>
+        <section class="sidebar">
+            <div class="teams">
+                <p id="ps" class="teams__icon active" style="background-color: #228be6;">PS</p>
+                <p id="ai" class="teams__icon" style="background-color: #fd7e14;">AI</p>
+                <p id="cs" class="teams__icon" style="background-color: #82c91e;">CS</p>
+                <ion-icon class="teams__add" name="add-outline"></ion-icon>
+            </div>
+            <div class="teams__list d-grid-2">
+                <div class="teams__user">
+                    <div class="content__user">
+                        <div class="content__user-head">
+                            <span id="teams__title">Pharmo Systems</span>
+                            <ion-icon class="content__user-icon" name="chevron-down-outline"></ion-icon>
+                        </div>
+                        <div class="content__user-name">
+                            <span class="user__active"></span>
+                            <span>Anuroop Pamarthi</span>
+                        </div>
+                    </div>
+                    <div class="content__new">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="content__create-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                        </svg>
+                    </div>
+                </div>
+                <div id="teams__list" class="teams__info">
+                    <div class="notifications">
+                        <ul id="notifiy__list" class="notifiy__list">
+
+                        </ul>
+                    </div>
+                    <ul id="messaging__list" class="messaging">
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="chat-window">
+            <div class="chat-box d-grid-2">
+                <div class="chat__title d-flex align-center">
+                    <div class="chat__group">
+                        <h3 class="chat__group-name d-flex align-center">
+                            <span id="chat__group-name"># announcements</span>
+                            <ion-icon class="chat__group-title-icon" name="star"></ion-icon>
+                        </h3>
+                        <div class="chat__group-description d-flex align-center">
+                            <div class="chat__group-members d-flex align-center">
+                                <ion-icon name="person-outline"></ion-icon>
+                                <span class="chat__group-count">21</span>
+                            </div>
+                            <p class="chat__group-bio">Get latest updates and more</p>
+                        </div>
+                    </div>
+                    <div class="chat__info">
+                        <ion-icon class="chat__info-icon" name="information-circle-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="chat__message-block d-flex">
+                    <div id="chat-loader" class="chat__message-loader">
+                        <p class="chat__message-loader-text">Loading...</p>
+                    </div>
+                    <div id="chat__messages-list" class="chat__messages">
+                        <ul id="chat__list" class="chat__message-list">
+
+                        </ul>
+                    </div>
+                    <div id="chat-input" class="chat__input">
+                        <input class="chat__input-box" type="text" placeholder="Message #annoucements">
+                        <div class="chat__input-options">
+                            <ion-icon name="flash-outline"></ion-icon>
+                            <p>B</p>
+                            <p style="transform: skewX(-15deg);">I</p>
+                            <ion-icon name="code-slash-outline"></ion-icon>
+                            <ion-icon name="list-outline"></ion-icon>
+                            <ion-icon name="link-outline"></ion-icon>
+                            <ion-icon name="at-outline"></ion-icon>
+                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="details">details</div> -->
+        </section>
+    </div>
+
+    <div id="loader" class="loader__screen">
+        <p class="loader__text">Loading...</p>
+    </div>
+
+    <script type="module" src="./JS Files/workspace.js"></script>
+</body>
+
+</html>
