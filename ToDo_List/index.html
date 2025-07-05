@@ -3,51 +3,51 @@
 <html>
 
 <head>
-    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/todo_favicon.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" />
     <script defer src="scripts/script.js"></script>
-    <title>To do list</title>
+    <title>Todo list | Your Daily Task Planner</title>
 </head>
 
 <body>
-    <div class="window d-flex__column">
-        <h1 class="heading-primary">
-            <span>ToDo List</span>
-            <ion-icon name="document-text-outline"></ion-icon>
-        </h1>
-        <div class="todo__block d-flex__column">
-            <div class="add__item d-flex__column">
-                <div class="add__item-form d-flex__row">
-                    <input class="add__item-input" type="text" placeholder="Enter a task item" name="add__item-input">
-                    <button class="btn__add d-flex__row">
-                        <span>Add</span>
-                        <ion-icon class="icon__add" name="add-outline"></ion-icon>
+    <div class="window dflex__column">
+        <header class="header">
+            <h1 class="heading__primary">
+                <span class="heading__primary--text">ToDo List</span>
+                <ion-icon class="heading__primary--icon" name="document-text-outline"></ion-icon>
+            </h1>
+        </header>
+        <main class="todo dflex__column">
+            <div class="todo__add dflex__column">
+                <div class="todo__form dflex__row">
+                    <input class="todo__input todo__input--add" type="text" placeholder="Enter a task item" name="add__item-input">
+                    <button class="todo__btn todo__btn--add dflex__row">
+                        <span class="todo__btn--text">Add</span>
+                        <ion-icon class="todo__btn--icon" name="add-outline"></ion-icon>
                     </button>
                 </div>
-                <p class="add__error">Enter something to add in the list *</p>
+                <p class="todo__error">Enter something to add in the list *</p>
             </div>
-            <div class="todo__show-items d-flex__column">
-                <h2 class="heading-secondary">
-                    <ion-icon name="list-outline"></ion-icon>
-                    <span>ToDo Items List</span>
+            <div class="todo__items dflex__column">
+                <h2 class="heading__secondary">
+                    <ion-icon class="heading__secondary--icon" name="list-outline"></ion-icon>
+                    <span class="heading__secondary--text">ToDo Items List</span>
                 </h2>
-                <ul class="todo__list d-flex__column">
-                    <!-- <li class="todo__item d-flex__row">
-                        <input class="todo__item-checkbox" type="checkbox" name="todo__item-checkbox">
-                        <span class="todo__item-text">Buy Milk</span>
-                        <ion-icon id="todo__delete" class="todo__item-delete" name="trash-outline"></ion-icon>
-                    </li>
-                    <li class="todo__item d-flex__row">
-                        <input class="todo__item-checkbox" type="checkbox" name="todo__item-checkbox">
-                        <span class="todo__item-text">Buy Milk</span>
-                        <ion-icon id="todo__delete" class="todo__item-delete" name="trash-outline"></ion-icon>
+                <ul class="todo__list dflex__column">
+                    <!-- <li class="todo__item dflex__row">
+                        <input class="todo__input--checkbox" type="checkbox" name="todo__item-checkbox">
+                        <span class="todo__item--text">Buy Milk</span>
+                        <ion-icon class="todo__btn todo__btn--delete" name="trash-outline" id="todo__btn--delete"></ion-icon>
                     </li> -->
                 </ul>
             </div>
-        </div>
+        </main>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
