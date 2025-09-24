@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/styles/home.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/otpauth@9.4.1/dist/otpauth.umd.min.js"></script>
+    <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="src/app.js" type="module" ></script>
+    <title>MFA Code Generator | Home</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">MFA Code Generator</h1>
+    </header>
+    <div class="content" id="content">
+        <div class="mfa-temp">
+            <button class="mfa-temp__button" id="tempCodeGenBtn">Temporary Code Generation</button>
+        </div>
+        <!-- <section class="mfa">
+            <h2 class="mfa__heading">vida | stage</h2>
+            <ul class="mfa__list">
+                <li class="mfa__item">
+                    <p class="mfa__user">user</p>
+                    <button class="mfa__button" id="001">Generate</button>
+                    <p class="mfa__code">00000</p>
+                    <div class="mfa__timer">
+                        <svg class="mfa__svg">
+                            <circle class="mfa__circle mfa__circle-base" cx="20" cy="20" r="15"></circle>
+                            <circle class="mfa__circle mfa__circle-progress" cx="20" cy="20" r="15"></circle>
+                        </svg>
+                        <p class="mfa__seconds">30</p>
+                    </div>
+                </li>
+                <li class="mfa__item">
+                    <p class="mfa__user">user</p>
+                    <button class="mfa__button">Generate</button>
+                    <p class="mfa__code">00000</p>
+                    <div class="mfa__timer">
+                        <svg class="mfa__svg">
+                            <circle class="mfa__circle mfa__circle-base" cx="20" cy="20" r="15"></circle>
+                            <circle class="mfa__circle mfa__circle-progress" cx="20" cy="20" r="15"></circle>
+                        </svg>
+                        <p class="mfa__seconds">30</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="mfa">
+            <h2 class="mfa__heading">vida | stage</h2>
+            <ul class="mfa__list">
+                <li class="mfa__item">
+                    <p class="mfa__user">user</p>
+                    <button class="mfa__button">Generate</button>
+                    <p class="mfa__code">00000</p>
+                    <div class="mfa__timer">
+                        <svg class="mfa__svg">
+                            <circle class="mfa__circle mfa__circle-base" cx="20" cy="20" r="15"></circle>
+                            <circle class="mfa__circle mfa__circle-progress" cx="20" cy="20" r="15"></circle>
+                        </svg>
+                        <p class="mfa__seconds">30</p>
+                    </div>
+                </li>
+            </ul>
+        </section> -->
+    </div>
+    <footer class="footer">
+        <p class="footer__text">&copy; All rights reserved to sole owner - <a href="" class="footer__link">Anuroop
+                Pamarthi</a></p>
+    </footer>
+
+    <div class="popup" id="tempCodePopup">
+        <div class="popup__content">
+            <div class="popup__header">
+                <h2 class="popup__heading">Temporary Code Generation</h2>
+                <ion-icon class="popup__icon" id="popupIconClose" name="close-circle-outline"></ion-icon>
+            </div>
+            <form class="temp-form" id="tempCodeGenForm" autocomplete="off">
+                <div class="temp-form__group">
+                    <label for="issuer" class="temp-form__label">issuer <span class="temp-form__span">*</span></label>
+                    <input type="text" class="temp-form__input" id="issuer" value="vidalung" name="issuer" disabled>
+                </div>
+                <div class="temp-form__group">
+                    <label for="label" class="temp-form__label">label <span class="temp-form__span">*</span></label>
+                    <input type="text" class="temp-form__input" id="label" placeholder="(stageportal) john.smith@example.com" name="label">
+                </div>
+                <div class="temp-form__group">
+                    <label for="secret" class="temp-form__label">secret <span class="temp-form__span">*</span></label>
+                    <input type="text" class="temp-form__input" id="secret" placeholder="ABCD1EFGH2IJKL3MNOP4QRST5UVWX6YZAB7CDEF8GHIJ9KLMN0OP" name="secret">
+                </div>
+                <button class="temp-form__button">Generate OTP</button>
+                <div class="temp-form__group">
+                    <p class="temp-form__code" id="tempMfaCode">000000</p>
+                    <p class="temp-form__timer">Timeout in:&nbsp;<span>30</span>&nbsp;sec</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
