@@ -31,7 +31,7 @@ class PopupView {
             if (labelValue === "" || secretValue === "") {
                 alert("Label / Secret must not be empty");
             } else {
-                const userData = { label: labelValue, secret: secretValue }
+                const userData = { label: labelValue, secretKey: secretValue }
                 handler(userData);
             }
         })
