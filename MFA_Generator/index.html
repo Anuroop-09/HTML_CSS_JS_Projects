@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="public/styles/home.css">
 
     <script defer src="https://cdn.jsdelivr.net/npm/otpauth@9.4.1/dist/otpauth.umd.min.js"></script>
     <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script defer src="src/app.js" type="module" ></script>
+    <script defer src="src/app.js" type="module"></script>
     <title>MFA Code Generator | Home</title>
 </head>
 
@@ -21,6 +23,9 @@
         <h1 class="header__title">MFA Code Generator</h1>
     </header>
     <div class="content" id="content">
+        <div id="loader">
+            <div class="spinner"></div>
+        </div>
         <div class="mfa-temp">
             <button class="mfa-temp__button" id="tempCodeGenBtn">Temporary Code Generation</button>
         </div>
@@ -89,11 +94,13 @@
                 </div>
                 <div class="temp-form__group">
                     <label for="label" class="temp-form__label">label <span class="temp-form__span">*</span></label>
-                    <input type="text" class="temp-form__input" id="label" placeholder="(stageportal) john.smith@example.com" name="label">
+                    <input type="text" class="temp-form__input" id="label"
+                        placeholder="(stageportal) john.smith@example.com" name="label">
                 </div>
                 <div class="temp-form__group">
                     <label for="secret" class="temp-form__label">secret <span class="temp-form__span">*</span></label>
-                    <input type="text" class="temp-form__input" id="secret" placeholder="ABCD1EFGH2IJKL3MNOP4QRST5UVWX6YZAB7CDEF8GHIJ9KLMN0OP" name="secret">
+                    <input type="text" class="temp-form__input" id="secret"
+                        placeholder="ABCD1EFGH2IJKL3MNOP4QRST5UVWX6YZAB7CDEF8GHIJ9KLMN0OP" name="secret">
                 </div>
                 <button class="temp-form__button">Generate OTP</button>
                 <div class="temp-form__group">
