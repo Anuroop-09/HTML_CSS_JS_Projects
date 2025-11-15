@@ -1,0 +1,31 @@
+<section class="section">
+    <h2 class="section__title">Playwright Commands</h2>
+    <ul class="section__list">
+        <li class="section__item">
+            <div class="block">
+                <span class="block__command">npm install -D @playwright/test@latest</span>
+                <span class="block__copy">
+                    <!-- <svg class="copy-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z" />
+                        <path
+                            d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z" />
+                    </svg>
+                    <svg class="tick-icon" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1827.701 303.065 698.835 1431.801 92.299 825.266 0 917.564 698.835 1616.4 1919.869 395.234z" />
+                    </svg> -->
+                    <svg class="copy-icon">
+                        <use xlink:href="sprite.svg#icon-copy"></use>
+                    </svg>
+                    <svg class="tick-icon">
+                        <use xlink:href="sprite.svg#icon-checkmark"></use>
+                    </svg>
+                    <span class="block__info">Copied!</span>
+                </span>
+            </div>
+            <div class="description">
+                <p class="description__text">Update Playwright with new binaries and their dependencies</p>
+            </div>
+        </li>
+    </ul>
+</section>

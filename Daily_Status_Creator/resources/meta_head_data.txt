@@ -1,0 +1,48 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DSC | Your Daily Status Creator</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Daily Status Creator (DSC) helps IT and QA professionals generate a professional daily work status summary using JIRA ticket numbers, test cases, and task details.">
+    <meta name="keywords"
+        content="daily status generator, QA report tool, JIRA status summary, testing daily update, QA automation summary, IT daily report">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="DSC | Daily Status Creator">
+    <meta property="og:description"
+        content="Generate professional daily status summaries using JIRA ticket numbers and testing details.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://your-domain.com/public/images/preview.png">
+    <meta property="og:url" content="https://your-domain.com">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DSC | Daily Status Creator">
+    <meta name="twitter:description"
+        content="Fast daily status summary generator for QA and IT professionals.">
+    <meta name="twitter:image" content="https://your-domain.com/public/images/preview.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://your-domain.com">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./public/svgs/favicon.svg" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./public/styles/main.css">
+
+    <!-- JS -->
+    <script defer src="./scripts/app.js" type="module"></script>
+</head>
