@@ -44,7 +44,7 @@ body {
 
     max-width: 100%;
     display: grid;
-    grid-template-rows: 8rem 1fr 3.2rem;
+    grid-template-rows: 8rem 1fr 2.6rem;
 }
 
 /* HEADER */
@@ -89,7 +89,9 @@ body {
 }
 
 .status-layout {
-    height: 100%;
+    height: calc(100vh - 10.6rem);
+    overflow-y: auto;
+    scrollbar-gutter: stable;
     padding: 2rem;
 
     display: grid;
@@ -293,7 +295,7 @@ body {
 
 /* FOOTER */
 .footer {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     background-color: var(--color-light);
 }
 

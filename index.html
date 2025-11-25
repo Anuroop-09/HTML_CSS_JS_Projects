@@ -5,157 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Anuroop Pamarthi</title>
 
-        html {
-            font-size: 62.5%;
-            font-family: sans-serif;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        body {
-            height: 100vh;
-        }
+    <link rel="stylesheet" href="./assets/styles/style.css">
 
-        .window {
-            display: grid;
-            grid-template-rows: 6rem auto;
-            gap: 2rem;
-        }
-
-        .heading__primary {
-            font-size: 4.8rem;
-        }
-
-        .heading__secondary {
-            font-size: 2.4rem;
-        }
-
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 4.8rem;
-        }
-
-        .header__link {
-            font-size: 1.2rem;
-        }
-
-        .section:not(:last-child) {
-            margin-bottom: 2rem;
-        }
-
-        .section__contanier {
-            padding: 0 9.6rem;
-        }
-
-        .list {
-            margin-top: 1.2rem;
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .list__item {
-            background-color: #ddd;
-            border-radius: 5px;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        .list__link:link,
-        .list__link:visited {
-            display: inline-block;
-            text-decoration: none;
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            color: blue;
-        }
-
-    </style>
+    <script defer src="./assets/scripts/index.js" type="module"></script>
 </head>
 
 <body>
-    <div class="window">
-        <header class="header">
-            <h1 class="heading__primary">My Projects</h1>
-            <a target="_blank" href="https://www.linkedin.com/in/anuroop-pamarthi-b4a2b1214"
-                class="header__link">Contact</a>
-        </header>
-        <main class="projects--list">
-            <section class="section section--myprojects">
-                <div class="section__contanier">
-                    <h2 class="heading__secondary">
-                        Project List
-                    </h2>
-                    <ul class="list">
-                        <li class="list__item">
-                            <a target="_blank" href="./Daily_Status_Creator/index.html" class="list__link">
-                                VIDA &vert; DSC App
-                            </a>
-                        </li>
-
-                        <li class="list__item">
-                            <a target="_blank" href="./Full_Stack_Resource/index.html" class="list__link">
-                                Full Stack Development Resources
-                            </a>
-                        </li>
-
-                        <li class="list__item">
-                            <a target="_blank" href="./BMI_Calculator/bmiHome.html" class="list__link">
-                                BMI Calculator &vert; app
-                            </a>
-                        </li>
-
-                        <li class="list__item">
-                            <a target="_blank" href="./ToDo_List/index.html" class="list__link">
-                                ToDo List App
-                            </a>
-                        </li>
-
-                        <li class="list__item">
-                            <a target="_blank" href="./MFA_Generator/index.html" class="list__link">
-                                MFA Generator App
-                            </a>
-                        </li>
-
-                        <li class="list__item">
-                            <a target="_blank" href="./Git_Playwright/index.html" class="list__link">
-                                Git Playwright
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="section section--recreation">
-                <div class="section__contanier">
-                    <h2 class="heading__secondary">
-                        Recreation Websites Projects
-                    </h2>
-                    <ul class="list">
-                        <li class="list__item">
-                            <a href="./Website_Recreations/Slack_Home_Clone/index.html" class="list__link">
-                                Slack Home Page
-                            </a>
-                        </li>
-
-                        <li class="list__item">
-                            <a href="./Website_Recreations/VIDA_Clone/index.html" class="list__link">
-                                VIDA Website
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-    </div>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#section--app_projects" class="nav__link">Apps</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#section--recreations" class="nav__link">Recreations</a>
+                </li>
+                <li class="nav__item">
+                    <a href="https://www.linkedin.com/in/anuroop-pamarthi-b4a2b1214" class="nav__link">LinkedIn</a>
+                </li>
+                <li class="nav__item">
+                    <a href="https://github.com/Anuroop-09" class="nav__link">Github</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1 class="hero__title">Anuroop Pamarthi</h1>
+            <p class="hero__tag">Professional QA Engineer | Enthusiast Web-Developer</p>
+        </div>
+    </header>
+    <main class="container" id="container">
+        
+    </main>
+    <footer>
+        <!-- <h3 class="footer__title">Contact</h3>
+        <form class="footer__form">
+            <div class="footer__group">
+                <label for="name" class="footer__label">Name</label>
+                <input type="text" class="footer__input" placeholder="Enter Your Name" id="name">
+            </div>
+            <div class="footer__group">
+                <label for="email" class="footer__label">Email</label>
+                <input type="text" class="footer__input" placeholder="Enter Your Email" id="email">
+            </div>
+            <div class="footer__group">
+                <label for="message" class="footer__label">Message</label>
+                <input type="text" class="footer__input" placeholder="Enter Your Message" id="message">
+            </div>
+            <button class="btn btn__submit" id="button--submit">Submit</button>
+        </form> -->
+    </footer>
 </body>
 
 </html>

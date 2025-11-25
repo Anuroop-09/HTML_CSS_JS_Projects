@@ -11,13 +11,12 @@
     --font-light: #fff;
     --font-light--2: #aaa;
     --font-warn: #e03131;
+    --font-footer-link: #1c7ed6;
 
     --font-dark--1: #222;
 
     --svg-circle-base: #eee;
     --svg-circle-progress: #3b7387;
-
-    --footer-link: #1864ab;
 }
 
 * {
@@ -34,7 +33,7 @@ body {
     height: 100vh;
     font-family: "Roboto", sans-serif;
     display: grid;
-    grid-template-rows: 8rem auto 2.6rem;
+    grid-template-rows: 8rem 1fr 2.6rem;
     position: relative;
 }
 
@@ -215,18 +214,26 @@ body {
 
 /* FOOTER */
 .footer {
+    font-size: 1.2rem;
+}
+
+.footer__content{
+    height: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.footer__text {
-    font-size: 1.4rem;
-    text-transform: capitalize;
+.footer__content--link:link,
+.footer__content--link:visited {
+    color: var(--font-footer-link);
+    text-decoration: none;
 }
 
-.footer__link {
-    color: var(--footer-link);
+.footer__content--link:hover,
+.footer__content--link:active {
+    border-bottom: 1px solid var(--font-footer-link);
 }
 
 /* POPUP */
