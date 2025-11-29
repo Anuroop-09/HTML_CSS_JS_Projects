@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="block__command">${item?.cmdValue}</span>
                     <span class="block__copy">
                         <svg class="copy-icon">
-                            <use xlink:href="public/svgs/sprite.svg#icon-copy"></use>
+                            <use xlink:href="public/svg/sprite.svg#icon-copy"></use>
                         </svg>
                         <svg class="tick-icon">
-                            <use xlink:href="public/svgs/sprite.svg#icon-checkmark"></use>
+                            <use xlink:href="public/svg/sprite.svg#icon-checkmark"></use>
                         </svg>
                         <span class="block__info">copied</span>
                     </span>

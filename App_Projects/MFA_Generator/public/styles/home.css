@@ -1,7 +1,10 @@
 :root {
+    --color-primary: #0a5069;
+
     --bg-light: #fff;
     --bg-light--1: #dee2e6;
     --bg-light--2: #eee;
+    --bg-light--3: #ccc;
     --bg-header: #0a5069;
     --bg-danger: #f03e3e;
     --bg-gen-btn: #f36e32;
@@ -55,8 +58,8 @@ body {
 .spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid #ccc;
-  border-top: 5px solid #007bff;
+  border: 5px solid var(--bg-light--3);
+  border-top: 5px solid var(--color-primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
