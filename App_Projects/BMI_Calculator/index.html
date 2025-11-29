@@ -1,41 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator</title>
-    <link rel="icon" href="BMI.ico">
-    <link rel="stylesheet" href="Style.css">
+    <title>BMI Calculator | Body Mass Index</title>
+
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-</head>
-<body>
-    <a href="../../index.html">Main Page</a>
-    <div class="calculator-info">
-        <h1>Check you BMI and Get Healthier</h1>
-        <!-- Calculator -->
-        <div class="rows">
-            <label>Enter your height (cms):</label>
-            <input autocomplete="off" type="number" id="height"><br><br>
-            <label>Enter your weight (kgs):</label>
-            <input autocomplete="off" type="number" id="weight"><br>
-            <button id="submit" class="btn">Calculate</button>
-        </div>
-        <!-- BMI Info -->
-        <div class="rows">
-            <h3>BMI Categories:</h3>
-            <p>Underweight = &lt;18.5 </p>
-            <p>Normal weight = 18.5 to 24.9</p>
-            <p>Overweight = 25 to 29.9</p>
-            <p>Obesity = BMI of 30 or greater</p>
-        </div>
-        <p id="bmi-msg">Let's find out your BMI!</p>
-    </div>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="bmiIndex.js"></script>
+    <link rel="stylesheet" href="./public/styles/style.css">
+
+    <script defer src="./scripts/index.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="brand">
+            <img class="brand__img" src="./public/img/header_logo.png" alt="BMI Brand Logo">
+            <div class="brand__title">
+                <p class="brand__title--main">BMI Calculator</p>
+                <p class="brand__title--sub">Body Mass Index</p>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a  class="nav__link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a  class="nav__link" href="https://www.linkedin.com/in/anuroop-pamarthi-b4a2b1214">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="hero">
+            <h1 class="hero__title">Calculate Your BMI</h1>
+            <div class="hero__info">
+                <p class="hero__text"><span class="hero__hightlight">BMI (Body Mass Index)</span> is a simple calculation using height and weight to estimate whether a person is underweight, normal, overweight, or obese. It’s widely used as a quick screening tool to understand general weight categories.</p>
+                <p class="hero__text"><span class="hero__hightlight hero__warning">Precaution:</span> BMI does not measure body fat or overall health accurately. Do not rely on it alone—always consider other health factors and consult a medical professional for proper assessment.</p>
+            </div>
+        </div>
+        <div class="bmi-calculator">
+            <section class="section section--calculator">
+                <div class="section__title">
+                    <h2 class="section__title-text">Calculator</h2>
+                </div>
+                <div class="section__body">
+                    <div class="toggle">
+                        <button class="toggle__btn toggle__btn--standard" style="cursor: not-allowed;">Standard</button>
+                        <button class="toggle__btn toggle__btn--metric toggle__btn-active">Metric</button>
+                    </div>
+                    <form class="form" id="bmi--form">
+                        <div class="form__group">
+                            <label class="form__label" for="height">
+                                <span class="form__label--main">Height</span>
+                                <span class="form__label--sub">(in cms)</span>
+                            </label>
+                            <input type="number" class="form__input" id="height">
+                            <p class="form__error"></p>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="weight">
+                                <span class="form__label--main">Weight</span>
+                                <span class="form__label--sub">(in kgs)</span>
+                            </label>
+                            <input type="number" class="form__input" id="weight">
+                            <p class="form__error"></p>
+                        </div>
+                        <div class="form__action">
+                            <button class="form__btn" id="btn--generate">Generate</button>
+                            <button class="form__btn" id="btn--reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="section section--info-result">
+                <ul class="section__list">
+                    <li class="section__item section__item--head">
+                        <span class="section__text">BMI Category</span>
+                        <span class="section__text">BMI Range</span>
+                    </li>
+                    <li class="section__item section__item--underweight">
+                        <span class="section__text">Underweight</span>
+                        <span class="section__text">Below 18.5</span>
+                    </li>
+                    <li class="section__item section__item--healthy">
+                        <span class="section__text">Healthy</span>
+                        <span class="section__text">18.5 – 24.9</span>
+                    </li>
+                    <li class="section__item section__item--overweight">
+                        <span class="section__text">Overweight</span>
+                        <span class="section__text">25.0 – 29.9</span>
+                    </li>
+                    <li class="section__item section__item--obesity">
+                        <span class="section__text">Obesity</span>
+                        <span class="section__text">30.0 or above</span>
+                    </li>
+                </ul>
+                <div class="section__result">
+                    <div class="bmi-score">
+                        <p class="bmi-score__text">Your BMI is:</p>
+                        <span class="bmi-score__number" id="bmi--score">_ _</span>
+                    </div>
+                    <div class="bmi-scale">
+                        <div class="bmi-scale__segment">
+                            <div class="bmi-scale__meter bmi-scale__meter--underweight"></div>
+                            <p class="bmi-scale__range">Underweight</p>
+                        </div>
+                        <div class="bmi-scale__segment">
+                            <div class="bmi-scale__meter bmi-scale__meter--healthy"></div>
+                            <p class="bmi-scale__range">Healthy</p>
+                        </div>
+                        <div class="bmi-scale__segment">
+                            <div class="bmi-scale__meter bmi-scale__meter--overweight"></div>
+                            <p class="bmi-scale__range">Overweight</p>
+                        </div>
+                        <div class="bmi-scale__segment">
+                            <div class="bmi-scale__meter bmi-scale__meter--obesity"></div>
+                            <p class="bmi-scale__range">Obesity</p>
+                        </div>
+                        <div class="bmi-scale__marker" id="bmi--marker"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__content">
+            <span class="footer__content--span">© All Rights Reserved to Sole-owner&nbsp;-&nbsp;</span>
+            <a href="https://www.linkedin.com/in/anuroop-pamarthi-b4a2b1214" class="footer__content--link"
+                target="_blank">Anuroop Pamarthi</a>
+        </p>
+    </footer>
 </body>
+
 </html>
