@@ -44,7 +44,7 @@ function loopData (items, element, imgFolder) {
         <div class="col d-flex">
             ${item?.deprecate === true ? '<p class="col__deprecate">Deprecated</p>' : "" }
             <div class="col__main d-flex">
-                <img src="./public/img/${imgFolder}/${item.img}" alt="" class="col__img">
+                <img src="./public/imgs/${imgFolder}/${item.img}" alt="" class="col__img">
                 <h2 class="heading-secondary">
                     <a target="_blank" href="${item.link}" class="heading-secondary--link">${item.title}</a>
                 </h2>

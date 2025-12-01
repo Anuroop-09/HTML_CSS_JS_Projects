@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 const markUp = `
                 <li class="section__item">
                     <div class="card">
-                        <img src="${imageSrc}" alt="${altImgText}" class="card__img">
+                        <img src="./assets/public/img/${imageSrc}" alt="${altImgText}" class="card__img">
                         <div class="card__info">
                             <h3 class="card__title">${projectTitle}</h3>
                             <div class="card__tags">
