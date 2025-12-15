@@ -64,7 +64,17 @@ export const sectionTemplates = {
                             <input class="form__input form__input--group" type="text" name="form__input" placeholder="Enter Ticket Number" />
                         </div>
                     </div>`,
+    "defect-raised": `<div class="form__section">
+                        <div class="form__field">
+                            <input class="form__input" type="text" name="form__input" placeholder="Enter Ticket Number" />
+                        </div>
+                    </div>`,
     "regression": `<div class="form__section">
+                        <div class="form__field">
+                            <input class="form__input" type="text" name="form__input" placeholder="Enter Ticket Number" />
+                        </div>
+                    </div>`,
+    "workflows": `<div class="form__section">
                         <div class="form__field">
                             <input class="form__input" type="text" name="form__input" placeholder="Enter Ticket Number" />
                         </div>
@@ -100,3 +110,17 @@ export const sectionTemplates = {
                         </div>
                     </div>`
 };
+
+export const statusOptions = [
+    { value: "story-review", text: "Story Review" },
+    { value: "mind-maps", text: "Mind Maps" },
+    { value: "test-cases", text: "Test Cases" },
+    { value: "execution", text: "Execution" },
+    { value: "defect-raised", text: "Defect Raised" },
+    { value: "regression", text: "Regression" },
+    { value: "workflows", text: "Workflows" },
+    { value: "automation", text: "Automation" },
+    { value: "hot-fix", text: "Hot-Fix" },
+    { value: "mini-update", text: "Mini-Update" },
+    { value: "dev-connect", text: "DEV Team Connect" }
+];
