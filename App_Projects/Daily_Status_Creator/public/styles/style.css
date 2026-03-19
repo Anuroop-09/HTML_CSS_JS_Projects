@@ -185,6 +185,7 @@ body {
     font-size: inherit;
     align-self: stretch;
     border-radius: .5rem;
+    border: none;
 }
 
 .form__section {
@@ -195,8 +196,17 @@ body {
 
 .form__section-group {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: 35% 65%;
     align-items: center;
+}
+
+.form__select-group {
+    font-size: inherit;
+    align-self: stretch;
+    border-radius: .5rem;
+    border: none;
+    height: 100%;
+    width: 100%;
 }
 
 .form__radio-group {
@@ -321,6 +331,7 @@ body {
 /* OUTLINES */
 .form__select,
 .form__input,
+.form__select-group,
 .section__summary {
     outline: none;
 }

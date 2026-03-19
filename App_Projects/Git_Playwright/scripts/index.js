@@ -2,7 +2,7 @@ import { commandsData } from "./data.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // HELPER FUNCTIONS
+    // HANDLE COMMANDS LIST
     const generateCmdsList = function (listOfCmds) {
         let markUpList = [];
         listOfCmds.forEach(item => {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <use xlink:href="public/svgs/sprite.svg#icon-copy"></use>
                         </svg>
                         <svg class="tick-icon">
-                            <use xlink:href="public/svgs/sprite.svg#icon-checkmark"></use>
+                            <use xlink:href="public/svgs/sprite.svg#icon-check"></use>
                         </svg>
                         <span class="block__info">copied</span>
                     </span>
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return markUpList.join("");
     }
 
+    // HANDLE SECTIONS LIST
     const generateSections = function (sectionsData) {
         let sectionList = [];
         sectionsData.forEach(item => {
@@ -45,19 +46,23 @@ document.addEventListener('DOMContentLoaded', () => {
         return sectionList.join("");
     }
 
+    // HANDLE COMMAND COPY ICON
     const showOrHideCopyIcon = function (element, state) {
         element.classList.toggle(state);
     }
 
+    // HANDLE BORDER COLOR
     const setBorderColor = function (element) {
         element.classList.toggle("block__copy--border");
     }
 
+    // HANDLE COMMAND COPY STATE
     const showOrHideCopyState = function (element) {
         const copyInfoEle = element.querySelector("span.block__info");
         copyInfoEle.classList.toggle("block__info--show");
     }
 
+    // HANDLE COMMAND COPY ANIMATION
     const handleCopyAnimation = function (element) {
         const copyIcon = element.querySelector("svg.copy-icon");
         const tickIcon = element.querySelector("svg.tick-icon");
@@ -73,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 
+    // HANDLE COMMAND COPY
     const handleCommandCopy = function (e) {
         const listItemParent = e.target.closest(".section__item");
         const cmdValue = listItemParent.querySelector(".block__command").innerText;
@@ -91,6 +97,32 @@ document.addEventListener('DOMContentLoaded', () => {
             handleCommandCopy(e);
             handleCopyAnimation(copyBtnBlock);
         });
-    })
+    });
+
+    const searchInputEle = document.getElementById('search-cmd');
+
+    // HANDLE SEARCH COMMAND
+    const handleSearchCmd = function() {
+        const searchInputVal = document.getElementById('search-cmd').value.toLowerCase();
+        const cmdDescriptionTxt = document.querySelectorAll('p.description__text');
+
+        if (searchInputVal.length > 0) {
+            for (let i = 0; i < cmdDescriptionTxt.length; i++){
+                const cmdTxt = cmdDescriptionTxt[i].textContent.toLowerCase();
+                if (cmdTxt.includes(searchInputVal)) {
+                    cmdDescriptionTxt[i].closest("li.section__item").style.display = "";
+                } else {
+                    cmdDescriptionTxt[i].closest("li.section__item").style.display = "none";
+                }
+            }
+        } else {
+            cmdDescriptionTxt.forEach(item => {
+                item.closest("li.section__item").style.display = "";
+            })
+        }
+    }
+
+    searchInputEle.addEventListener('input', handleSearchCmd);
+    
 });
 

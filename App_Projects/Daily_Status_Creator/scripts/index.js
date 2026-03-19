@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
                                 <option value="hot-fix">Hot-Fix</option>
                                 <option value="mini-update">Mini-Update</option>
                                 <option value="dev-connect">DEV Team Connect</option>
+                                <option value="sanity-test">Sanity Test</option>
                             </select>
                             ${templates[inputTemplate]}
                             <button class="btn btn__delete">
@@ -137,9 +138,16 @@ window.addEventListener('DOMContentLoaded', () => {
             const drpDwn = item.querySelector(".form__select");
             formValues.selection = drpDwn.value;
 
+            /**
+             * Deprecating radio selection
             // GET RADIO BUTTON SELECTION
             const radioBtn = item.querySelector("input[type='radio']:checked");
             formValues.radioVal = radioBtn ? radioBtn.nextElementSibling.textContent.trim() : null;
+             */
+
+            // GET STATUS ACTION SELECTION VALUE
+            const statusAction = item.querySelector('.form__select-group');
+            formValues.statusActionVal = statusAction ? statusAction.value : null;
 
             // GET INPUT TEXT VALUE
             const textInput = item.querySelector("input[type='text']");
@@ -156,21 +164,28 @@ window.addEventListener('DOMContentLoaded', () => {
             return;
         };
 
+        // CONVERT TO SENTENCE CASE
+        const toSentenceCase = function(item) {
+            const firstWord = item.slice(0, 1).toUpperCase();
+            const restOfWord = item.slice(1).toLowerCase();
+            return `${firstWord}${restOfWord}`;
+        }
+
         // GENERATE STATUS SUMMARY
         statusObject.forEach(statusItem => {
-            const {selection, radioVal, inputVal} = statusItem;
+            const {selection, statusActionVal, inputVal} = statusItem;
             switch (selection) {
                 case "story-review":
-                    if (radioVal) statusSummaryArr.push(`${radioVal} reviewing ${inputVal} stories.`);
+                    if (statusActionVal) statusSummaryArr.push(`${toSentenceCase(statusActionVal)} reviewing ${inputVal} stories.`);
                     break;
                 case "mind-maps":
-                    if (radioVal) statusSummaryArr.push(`${radioVal} working on Minds-maps for ${inputVal} stories.`);
+                    if (statusActionVal) statusSummaryArr.push(`${toSentenceCase(statusActionVal)} working on Minds-maps for ${inputVal} stories.`);
                     break;
                 case "test-cases":
-                    if (radioVal) statusSummaryArr.push(`${radioVal} Test cases for ${inputVal} stories.`);
+                    if (statusActionVal) statusSummaryArr.push(`${toSentenceCase(statusActionVal)} Test cases for ${inputVal} stories.`);
                     break;
                 case "execution":
-                    if (radioVal) statusSummaryArr.push(`Worked on ${inputVal} stories on ${radioVal.toUpperCase()} environment.`);
+                    if (statusActionVal) statusSummaryArr.push(`Worked on ${inputVal} stories on ${toSentenceCase(statusActionVal)} environment.`);
                     break;
                 case "defect-raised":
                     statusSummaryArr.push(`Identified issues on STAGE environment, Raised ${inputVal} defects.`);
@@ -182,7 +197,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     statusSummaryArr.push(`Worked on Workflow Test cases of ${inputVal} stories on STAGE environment.`);
                     break;
                 case "automation":
-                    if (radioVal) statusSummaryArr.push(`${radioVal} working on automating ${inputVal} Test cases.`);
+                    if (statusActionVal) statusSummaryArr.push(`${toSentenceCase(statusActionVal)} working on automating ${inputVal} Test cases.`);
                     break;
                 case "hot-fix":
                     statusSummaryArr.push(`Worked on ${inputVal} Hot-fix stories on STAGE environment.`);
@@ -192,6 +207,9 @@ window.addEventListener('DOMContentLoaded', () => {
                     break;
                 case "dev-connect":
                     statusSummaryArr.push(`Connected with DEV Team to discuss ${inputVal} clarifications/issues.`);
+                    break;
+                case "sanity-test":
+                    if (statusActionVal) statusSummaryArr.push(`Performed Sanity test on ${toSentenceCase(statusActionVal)} environment.`);
                     break;
                 default: throw Error("Invalid Status Item");
             }
